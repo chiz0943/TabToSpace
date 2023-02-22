@@ -29,7 +29,7 @@ int main( int argc, char *argv[] ) {
                 char tempch = ch ;
                 ifs.get(ch) ; 
                 if ( tempch == '(' ) {
-                    if ( ch != ' ' && ch !='\''&& ch !=')' ) {
+                    if ( ch != ' ' && ch !='\''&& ch !='\"'&& ch !=')' ) {
                         ofs.write("( ",2) ;
                     }
                     else {
@@ -37,7 +37,7 @@ int main( int argc, char *argv[] ) {
                     }
                 }
                 else{
-                    if ( lastCh != ' ' && lastCh !='\''&& lastCh !='(' ) {
+                    if ( lastCh != ' ' && lastCh !='\''&& lastCh !='\"'&& lastCh !='(' ) {
                         ofs.write(" )",2) ;
                     }
                     else {
